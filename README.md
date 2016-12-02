@@ -14,5 +14,5 @@ Command : ngram_algorithm.py source_document_directory suspicious_train suspicio
 
 For evaluating the results,
 
-Command : output.txt suspicious_reference.txt
+Command : evaluate.py output.txt suspicious_reference.txt
 
