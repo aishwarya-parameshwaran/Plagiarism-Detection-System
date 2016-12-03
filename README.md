@@ -4,7 +4,7 @@
 
 The goal of this algorithm is to find whether a document has been plagiarised or not. The main motivation behind using n-gram overlap approach is that comparing n-grams is much faster and efficient rather than single word matching.
 
-###Usage
+###Usage:
 
 For executing the algorithm,
 
