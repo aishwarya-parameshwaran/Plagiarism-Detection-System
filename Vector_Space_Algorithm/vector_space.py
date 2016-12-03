@@ -191,13 +191,18 @@ if __name__ == '__main__':
     train_source = sys.argv[2]
     test_suspicious = sys.argv[3]
     test_source = sys.argv[4]
-
+    algorithm = sys.argv[5]
     threshold = get_trained_threshold(train_source,train_suspicious)
-
-    source_model = create_model(test_source)
-    print "Source model created"
-    test_model = create_model(test_suspicious)
-    print "Test model created"
+    if algorithm == 'tf':
+        source_model = create_model(test_source)
+        print "Source model created"
+        test_model = create_model(test_suspicious)
+        print "Test model created"
+    elif algorithm == 'tfidf':
+        source_model = create_model_tf_idf(test_source)
+        print "Source model created"
+        test_model = create_model_tf_idf(test_suspicious)
+        print "Test model created"
     vector_model = vector_model_matrix(source_model, test_model)
     print "Vector model matrix created"
     plagiarized_docs = get_plagiarism_status(vector_model, threshold)
