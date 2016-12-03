@@ -8,9 +8,9 @@ Usage:
 
 For executing the algorithm,
 
-Command : ngram_algorithm.py source_document_directory suspicious_train suspicious_test
+Command : ngram_algorithm.py source_document_directory suspicious_document_train suspicious_document_test
 
-2 output files are generated, output.txt and suspicious_reference.txt
+2 output files are generated, output.txt and suspicious_reference.txt. The output.txt lists the files and outputs the label for each file ie. "Plagiarised or Not Plagiarised". The suspicious_reference.txt contains the names of all the files are that are suspicious extracted from the original suspicious documents. This file is used while evaluating the results.
 
 For evaluating the results,
 
