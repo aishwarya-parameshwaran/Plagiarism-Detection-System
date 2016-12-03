@@ -41,3 +41,17 @@ Command : snipDoc.py source_directory_path
 
 This script is used to shorten the length of text files during preprocessing for training and testing purpose. Takes the path to directory containing files to be shortened. Changes made to the same copy of files permanently.
 
+##Vector Space Algorithm
+
+The documents have been transformed into their vector representations and cosine similarity has been computed for each pairs of suspicious and source documents. An improvement was attempted in the vanilla implementation of cosine similarity wherein for each token, instead of the term frequency, its tf-idf value is used in the vector space.
+
+Usage:
+
+Command : vector_space.py train_suspicious_folder train_source_folder test_suspicious_folder test_source_folder algorithm
+
+where, algorithm can either take value 'tf' or 'tfidf'
+
+For vanilla implementation of cosine similarity, set algorithm to 'tf' in command line arguments. For the alternative approach where tf-idf is implemented in combination with cosine similarity, set algorithm to 'tfidf'
+
+The python file executes the file and writes a list of document names classified as plagiarized to console. Also, it computes the value of precision and writes it to console.
+
